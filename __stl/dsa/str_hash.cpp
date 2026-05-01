@@ -2,10 +2,11 @@
 #define B 1000000007LL
 #define C 972663749LL
 #define D 1000000009LL
+#define mp make_pair
 
 vll h1, p1, h2, p2;
 
-void init(string s, int n) {
+void hinit(string s, int n) {
 	h1.assign(n, 0);
 	p1.assign(n, 0);
 	h2.assign(n, 0);
@@ -22,6 +23,6 @@ void init(string s, int n) {
 	}
 }
 
-pair<ll,ll> hash(int a, int b) {
+pair<ll,ll> sbsh(int a, int b) {
 	return (a==0)?mp(h1[b], h2[b]):mp((h1[b]-(h1[a-1]*p1[b-a+1])%B+B)%B,(h2[b]-(h2[a-1]*p2[b-a+1])%D+D)%D);
 }
