@@ -37,7 +37,7 @@ void dfs_lca(int v, int p, int depth) {
 	lca_depth[v] = depth;
 	lca_first[v] = (int)lca_euler.size();
 	lca_euler.pb({depth, v});
-	for (int to : adj[v]) {
+	for (auto to : adj[v]) {
 		if (to == p) continue;
 		if (lca_vis[to]) continue;
 		dfs_lca(to, v, depth + 1);
