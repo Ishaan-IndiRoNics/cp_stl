@@ -1,0 +1,17 @@
+vi topo() {
+	vi indeg(g_size);
+	for (int i = 0; i < g_size; i++) for (auto j : adj[i]) indeg[j.e2]++;
+	queue<int> q;
+	for (int i = 0; i < g_size; i++) if (indeg[i] == 0) q.push(i);
+	vi ans;
+	while (!q.empty()) {
+		int c = q.front();
+		ans.pb(c);
+		for (auto i : adj[c]) {
+			indeg[i.e2]--;
+			if (indeg[i.e2] == 0) q.push(i.e2);
+		}
+		q.pop();
+	}
+	return ans;
+}
