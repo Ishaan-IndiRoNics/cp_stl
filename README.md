@@ -6,7 +6,7 @@ List of folder meanings:
 -instructive = submissions that demontrate rare/difficult to adapt methods
 
 List of things in tbe:
--zalgo (Z array constructor)
+-
 
 List of things in instructive:
 -hld_sptb_lca (HLD along with a Sparse Table LCA)
